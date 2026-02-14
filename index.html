@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wesaya Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h2>Wesaya Restaurant</h2>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#order">order</a></li>
+                <li><a href="#login">Login</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home" class="page active">
+        <h1>Welcome to Wesaya Restaurant</h1>
+        <p>Delicious food, fresh ingredients, and a cozy atmosphere!</p>
+        <a href="#order">
+            <button class="order-now">Order Now</button>
+        </a>
+    </section>
+    <section id="menu" class="page">
+        <h2>Our Menu</h2>
+        <div>
+            <h3> pizza</h3>
+            <p>Cheese pizza - 10$</p>
+            <p>Pepperoni pizza - 12$</p>
+        </div>
+        <div>
+            <h3> pasta</h3>
+            <p>Spaghetti - 8$</p>
+            <p>Fettuccine Alfredo - 9$</p>
+        </div>
+        <div>
+            <h3> burgers</h3>
+            <p>Classic Burger - 11$</p>
+            <p>Chicken Burger - 10$</p>
+        </div>
+    </section>
+    <section id="gallery" class="page">
+        <h2>Our Gallery</h2>
+        <div class="gallery-container">
+            <img src="https://images.unsplash.com/photo-1601924582975-7e1b3c7b0f6b" alt="Pizza">
+            <img src="https://images.unsplash.com/photo-1550547660-d9450f859349" alt="Burger">
+            <img src="https://images.unsplash.com/photo-1525755662778-989d0524087e" alt="Pasta">
+        </div>
+    </section>
+    <section id="order" class="page">
+        <h2>Place Your Order</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+            <label for="food">Select your food:</label>
+            <select required>
+                <option>classic burger</option>
+                <option>chicken burger</option>
+                <option>pepperoni pizza</option>
+                <option>Cheese Pizza</option>
+                <option>Spaghetti</option>
+                <option>Fettuccine Alfredo</option>
+            </select>
+            <label>delivery address</label>
+            <input type="text" placeholder="Enter your address" required>
+            <button type="submit">Submit Order</button>
+        </form>
+    </section>
+    <section id="login" class="page">
+        <h2>Login page</h2>
+        <form>
+            <label>Email:</label>
+            <input type="email" placeholder="Enter your email" required>
+            <label>Password:</label>
+            <input type="password" placeholder="Enter your password" required>
+            <button type="submit">Login</button>
+        </form>
+    </section>
+    <section id="contact" class="page">
+        <h2>Contact Us</h2>
+        <form>
+            <label>Name:</label>
+            <input type="text" placeholder="Enter your name">
+            <label>Your Message:</label>
+            <textarea placeholder="Enter your message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2026 Wesaya Restaurant. All rights reserved.</p>
+    </footer>
+    <script>
+        function showpage(pageId) {
+            let pages = document.querySelectorAll(".page");
+
+            pages.forEach(page => {
+                page.classList.remove("active");
+            });
+            document.getElementById(pageId).classList.add("active");
+        }
+    </script>
+</body>
+
+</html>
